@@ -1,0 +1,20 @@
+// Core variables and mixins
+@import "variables";
+@import "mixins";
+@import "general";
+
+.doctutru {
+	// Reset and dependencies
+	@import "normalize";
+
+	// Core CSS
+	@import "scaffolding";
+	@import "grid";
+	@import "forms";
+
+	// Utility classes
+	@import "utilities";
+	@import "my_modal";
+}
+
+@import "my_docs";

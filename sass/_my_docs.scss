@@ -1,0 +1,261 @@
+$color_link: #0EA646;
+#searchResults {
+
+  @include boot;
+  padding: 0 15px;
+  .rank_dn {
+    display: none;
+  }
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .seo {
+    h1 {
+      box-sizing: border-box;
+      color: #555;
+      display: block;
+      font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 20px;
+      font-weight: 500;
+      height: 1.1em;
+      line-height: 1em;
+      margin:20px 0 25px 0;
+    }
+  }
+  #doctorSort {
+    padding: 0 0 14px 0;
+    border-bottom: 1px solid #E3E3E3;
+    .sort-num {
+      padding-right: 0;
+      text-align: right;
+    }
+    .result {
+      box-sizing: border-box;
+      color: #302A7A;
+      display: block;
+      float: left;
+      font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 22px;
+      height: 31px;
+      line-height: 31.428571701049805px;
+      margin-top: -2px;
+      min-height: 1px;
+      padding-left: 0;
+      position: relative;
+      span {
+        box-sizing: border-box;
+        color: $color_link;
+        display: inline;
+        font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 22px;
+        font-weight: bold;
+        height: auto;
+        line-height: 31.428571701049805px;
+        width: auto;
+      }
+    }
+    .sort-type {
+      .form-inline {
+        margin-right: -10px;
+      }
+    }
+    .sort-type label, .sort-num label {
+      box-sizing: border-box;
+      color: #555;
+      cursor: default;
+      display: inline-block;
+      font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 13px;
+      font-weight: normal;
+      height: 18px;
+      line-height: 18.571428298950195px;
+      margin-bottom: 0px;
+      vertical-align: middle;
+    }
+    .sort-type .form-control, .sort-num .form-control {
+      -webkit-box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px 0px inset;
+      -webkit-transition-delay: 0s, 0s;
+      -webkit-transition-duration: 0.15s, 0.15s;
+      -webkit-transition-property: border-color, box-shadow;
+      -webkit-transition-timing-function: ease-in-out, ease-in-out;
+      align-items: center;
+      background-color: #FFF;
+      background-image: none;
+      border-bottom-color: #CCC;
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+      border-bottom-style: solid;
+      border-bottom-width: 1px;
+      border-image-outset: 0px;
+      border-image-repeat: stretch;
+      border-image-slice: 100%;
+      border-image-source: none;
+      border-image-width: 1;
+      border-left-color: #CCC;
+      border-left-style: solid;
+      border-left-width: 1px;
+      border-right-color: #CCC;
+      border-right-style: solid;
+      border-right-width: 1px;
+      border-top-color: #CCC;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      border-top-style: solid;
+      border-top-width: 1px;
+      box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px 0px inset;
+      box-sizing: border-box;
+      color: #555;
+      cursor: default;
+      display: inline-block;
+      font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 13px;
+      height: 30px;
+      letter-spacing: normal;
+      line-height: normal;
+      margin: 0 0 0 5px;
+      padding: 4px;
+      text-indent: 0px;
+      text-shadow: none;
+      text-transform: none;
+      transition-delay: 0s, 0s;
+      transition-duration: 0.15s, 0.15s;
+      transition-property: border-color, box-shadow;
+      transition-timing-function: ease-in-out, ease-in-out;
+      vertical-align: middle;
+      white-space: pre;
+      word-spacing: 0px;
+    }
+  }
+
+  #doctorList.doc-list {
+    padding: 0;
+    border-bottom: 1px solid #E3E3E3;
+    float: none;
+    margin: 0;
+    .doc {
+      padding: 25px 0;
+      border-bottom: 1px solid #E3E3E3;
+    }
+    .doc-request {
+      padding-right: 0;
+      max-width: 170px;
+      float: right;
+      .star-rating {
+        padding-right: 10px;
+      }
+      .reviews {
+        width: 136px;
+      }
+      .rating {
+        @include rating;
+      }
+      .btn {
+        @include docbtn;
+      }
+      .doctorReview {
+        @include dotted;
+        font-size: 13px;
+      }
+    }
+    .doc-name {
+      padding-left: 0;
+      a img {
+        float: left;
+        width: 74px;
+        max-height: 110px;
+        margin-top: 3px;
+      }
+      h3, h4 {
+        @include h3
+      }
+      h4 {
+        @include h4
+      }
+      .specialty {
+        @include specialty;
+      }
+    }
+    .doc-options {
+      font-size: 13px;
+      line-height: 1em;
+      color:#555;
+      .doctorMap {
+        @include dotted;
+      }
+      .doc-option {
+        line-height: 1.2em;
+        margin:4px 0;
+      }
+    }
+  }
+  .green-ico {
+    @include greenico;
+  }
+  @include icos;
+  @import "pagination";
+  ul.pagination>li>a, ul.pagination>li>span {
+    color: $color_link;
+    font-size: 13px;
+  }
+  &.narrow {
+    min-width: 473px;
+    #doctorSort {
+      .result {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+      .sort-type {
+        width: 50%;
+        padding-left: 0;
+      }
+      .sort-num {
+        width: 50%;
+      }
+    }
+    .address.doc-option {
+      display: none;
+    }
+    .star-rating {
+      min-width: 110px;
+      display: inline-block;
+    }
+    #doctorList.doc-list {
+      .doc-request {
+        float: right;
+        width: 45%;
+        max-width: 215px;
+        .star-rating, .reviews, .rating {
+          display: none;
+        }
+        .btn {
+          float: left !important;
+          display: block;
+          margin-top: 10px;
+        }
+      }
+      .doc-options {
+        float: right;
+        width: 45%;
+        max-width: 215px;
+        padding-right: 0;   
+      }
+      .doc-name {
+        float: left;
+        width: 55%;
+        h3 {
+          white-space: nowrap;
+        }
+      }
+    }
+    .rank_dn {
+      display: inline-block;
+      width: 155px;
+      padding-left: 15px;
+      margin-bottom: 5px;
+      .rating {
+        @include rating;
+      }
+    }
+  }
+}
