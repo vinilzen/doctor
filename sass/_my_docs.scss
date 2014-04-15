@@ -186,6 +186,10 @@ $color_link: #0EA646;
       .doc-option {
         line-height: 1.2em;
         margin:4px 0;
+        &.consult {
+          white-space: nowrap;
+          overflow: hidden;
+        }
       }
     }
   }

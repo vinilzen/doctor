@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Формы поиска</title>
+  	<link href="./css/ion.rangeSlider.css" rel="stylesheet"></head>
+  	<link href="./css/ion.rangeSlider.skinNice.css" rel="stylesheet"></head>
+  	<link href="./css/form.css" rel="stylesheet"></head>
+	<script src="js/jq.js" type="text/javascript"></script>
+	<script src="js/ion.rangeSlider.min.js" type="text/javascript"></script>
+	<script src="js/form.js" type="text/javascript"></script>
+</head>
+<body>
+
+<div class="container">
+
+<!-- 	<div>
+		<label for="size-sm"><input type="radio" name="size" value="size-sm" id="size-sm" class="tglsize" > от 205 до 379 </label><br>
+		<label for="size-md"><input type="radio" name="size" value="size-md" id="size-md" class="tglsize" > от 380 до 599 </label><br>	
+		<label for="size-lg"><input type="radio" name="size" value="size-lg" id="size-lg" class="tglsize" > от 600  до 1500 </label>
+	</div>
+
+	<div class="clearfix"></div> -->
+
+
+	<div id="leftFilter" class="doctutru_form">
+		<div class="tab-pane active" id="doctorLeft">
+			<form method="get" action="" name="search-doctor" id="searchDoctor">
+				<input type="hidden" name="search" value="doctors">
+				<div class="basic-filter">
+					<div class="form-group md-spec">
+						<script>
+							$.get("//doctu.ru/dispatch.php?act=doctorSpecialityOptions", function(data) {
+								$("#doctorSpecialitySelectLeft").append(data);
+							});
+						</script>
+						<select name="speciality" class="form-control" data-placeholder="Cпециализация врача" id="doctorSpecialitySelectLeft"></select>
+					</div>
+					<div class="form-group md-metro">
+						<script>
+							$.get("//test-doctu.ru//dispatch.php?act=helper/metroOptions", function(data) {
+								$("#doctorMetroSelectLeft").append(data);
+							});
+						</script>
+						<select name="metro" class="form-control" data-placeholder="Станция метро" id="doctorMetroSelectLeft"></select>
+					</div>
+					<button type="submit" class="btn btn-info btn-block">Найти</button>
+					<div class="clearfix"></div>
+				</div>
+				<!--/basic-filter-->
+				<div id="doctLeftAdv" class="adv-filter">
+					<div class="form-group lg-fio">
+						<label class="" for="name">ФИО врача или услуга:</label>
+						<input type="text" id="doctor_name" class="form-control" name="name" value="" form="searchDoctor" placeholder="" autocomplete="off">
+					</div>
+					<div class="form-group lg-price">
+						<label class="" for="priceLevelRange">Стоимость приема:</label>
+						<input name="priceLevelRange" type="text" id="priceSliderDoctorLeft" class="form-control" data-from="" data-to="" value="0;5000">
+					</div>					
+					<div class="clearfix"></div>
+					<div class="md-left-select">
+						<div class="form-group lg-sex">
+							<label for="sex">Пол врача:</label>
+							<select name="sex" class="form-control">
+								<option value="">Не важно</option>
+								<option value="male">Мужской</option>
+								<option value="female">Женский</option>
+							</select>
+						</div>
+						<div class="form-group lg-child">
+							<label for="proprietary">Детский/Взрослый:</label>
+							<select name="age" class="form-control">
+								<option value="">Не важно</option>
+								<option value="child">Детский</option>
+								<option value="adult">Взрослый</option>
+							</select>
+						</div>
+					</div>
+					<div class="md-right-checkbox">
+						<div class="checkbox">
+							<label>
+								<input name="bookingType" value="1" type="checkbox">
+								Запись по телефону
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input name="haveRating" value="1" type="checkbox">
+								Только с отзывами
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input name="homevisit" value="1" type="checkbox">
+								Выезд на дом
+							</label>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

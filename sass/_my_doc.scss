@@ -82,7 +82,7 @@
 		}
 		.reviews {
 			h3 {
-				font-weight: 600;
+				font-weight: 700;
 				color: #302A7A;
 				margin-bottom: 5px;
 			}
@@ -100,7 +100,7 @@
 				padding-left: 20px;
 				margin: 0;
 				font-size: 13px;
-				.green-ico.ico-thumb-up {
+				.green-ico.ico-thumb-up , .green-ico.ico-thumb-down {
 					margin-left: -20px;
 					margin-right: 5px;
 				}
@@ -226,6 +226,7 @@
 			}
 			.education, .reviews {
 				width: 100%;
+				padding-left: 0;
 			}
 		}
 	}
